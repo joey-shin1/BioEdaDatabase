@@ -15,6 +15,44 @@ def _is_sp3_carbon(atom):
         return False
 
 
+def find_rings_old(mol, merge_rings=True, find_hetero_rings=True, find_small_rings=True):
+    # identify aromatic rings & 3/4-member rings
+    rings = []
+    for r in Chem.GetSymmSSSR(mol):
+        if len(r) > 8: # never record macrocycles
+            continue
+        is_ar = all([mol.GetAtomWithIdx(i).GetIsAromatic() for i in r])
+        is_small = len(r) < 5
+        if is_ar:
+            rings.append(set(r))
+        elif find_small_rings:
+            if is_small:
+                rings.append(set(r))
+        elif find_hetero_rings:
+            cnt = 0
+            for idx in r:
+                atom = mol.GetAtomWithIdx(idx)
+                if atom.GetSymbol() == 'C' and len(atom.GetNeighbors()) == 4:
+                    cnt += 1
+            if cnt <= 2:
+                rings.append(set(r))
+    
+    if merge_rings:
+        flag = True  
+        while flag:
+            flag = False
+            for i in range(len(rings)):
+                if len(rings[i]) == 0: continue
+                for j in range(i + 1, len(rings)):
+                    shared_atoms = rings[i] & rings[j]
+                    if len(shared_atoms) >= 2:
+                        rings[i].update(rings[j])
+                        rings[j] = set()
+                        flag = True
+    rings = [set(r) for r in rings if len(r) > 0]
+    return rings
+
+
 def find_rings(
     mol: Chem.Mol, 
     force_exclude_macro: bool = True,
