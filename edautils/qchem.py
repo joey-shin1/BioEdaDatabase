@@ -7,8 +7,8 @@ import parmed
 DEFAULT_QCHEM_SETTING = {
     "JOBTYPE": "eda",
     "EDA2": 1,
-    "METHOD": "wB97M-V",
-    "BASIS": "def2-QZVPPD",
+    "METHOD": "wB97X-V",
+    "BASIS": "def2-TZVPD",
     "SCF_CONVERGENCE": 8,
     "THRESH": 14,
     "XC_GRID": "000099000590",
@@ -16,8 +16,8 @@ DEFAULT_QCHEM_SETTING = {
     "SYMMETRY": False,
     "EDA_BSSE": False,
     "FD_MAT_VEC_PROD": False,
-    "MEM_TOTAL": 8000,
-    "MEM_STATIC": 1000,
+    "MEM_TOTAL": 64000,
+    "MEM_STATIC": 10000,
     "SCF_PRINT_FRGM": True
 }
 
@@ -139,7 +139,7 @@ def parse_qchem_eda_output(fname: os.PathLike, unit: str = 'kJ') -> Dict[str, fl
                 elif content[0] == "E_mod_pauli" or content[0] == '[E_mod_pauli':
                     res['MOD_PAULI'] = float(content[5])
                 elif content[0] == "E_cls_disp":
-                    res['CLS_DISP'] == float(content[-1])
+                    res['CLS_DISP'] = float(content[-1])
                 elif content[0] == "PREPARATION":
                     res["PREPARATION"] = float(content[-1])
                 elif content[0] == "FROZEN":
@@ -213,23 +213,29 @@ def qchem_opt_output_to_pdb(path_qchem_output, path_pdb, resname="UNK"):
     to_pdb(coords, symbols, path_pdb, resname)
 
 
-def parse_qchem_sp_output(fname: os.PathLike):
+def parse_qchem_output(fname: os.PathLike):
     read = 0
-    pos = []
-    symbols = []
+    pos = None
+    symbols = None
+    energy = None
     with open(fname) as f:
         for line in f:
             if read == 0:
                 read = line.strip().startswith("Standard Nuclear Orientation")
+                if read > 0:
+                    pos = []
+                    symbols = []
             elif read >=1 and read < 3:
                 read += 1
             elif read >= 3:
                 content = line.strip().split()
                 if content[0].startswith("-"):
                     read = 0
-                    break
                 else:
                     pos.append([float(content[-3]), float(content[-2]), float(content[-1])])
                     symbols.append(content[1])
+            
+            if line.strip().startswith("Total energy"):
+                energy = float(line.strip().split()[-1])
     pos = np.array(pos)
-    return pos, symbols
+    return pos, symbols, energy
