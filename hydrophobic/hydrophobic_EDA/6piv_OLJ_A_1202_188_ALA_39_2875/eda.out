@@ -1,14 +1,8 @@
-
-Running Job 1 of 1 eda.in
-qchem eda.in_2095117.0 /tmp/qchem2095117/ 1
-/global/common/software/nersc9/qchem/6.2.1-cpu/exe/qcprog.exe_s eda.in_2095117.0 /tmp/qchem2095117/
                   Welcome to Q-Chem
      A Quantum Leap Into The Future Of Chemistry
 
 
- Q-Chem 6.2, Q-Chem, Inc., Pleasanton, CA (2024)
-
- License issued to: National Energy Research Scientific Computing Center (site)
+ Q-Chem 6.2 (devel), Q-Chem, Inc., Pleasanton, CA (2024)
 
  E. Epifanovsky,  A. T. B. Gilbert,  Xintian Feng,  Joonho Lee,  Yuezhi Mao,  
  N. Mardirossian,  P. Pokhilko,  A. White,  M. Wormit,  M. P. Coons,  
@@ -96,22 +90,21 @@ qchem eda.in_2095117.0 /tmp/qchem2095117/ 1
    J. Chem. Phys. 155, 084801 (2021)
    https://doi.org/10.1063/5.0055522 (open access)
 
- Q-Chem 6.2.1 for Intel X86 EM64T Linux
+ Q-Chem 6.2.0 for Intel X86 EM64T Linux
 
  Parts of Q-Chem use Armadillo 9.900.5 (Nocturnal Misbehaviour).
  http://arma.sourceforge.net/
 
- Q-Chem begins on Tue Sep 30 00:11:43 2025  
+ Q-Chem begins on Wed Jan 21 17:17:23 2026  
 
- Host: login33
+ Host: n0102.savio3
 0
 
-     Scratch files written to /tmp/qchem2095117//
- Sep124 |scratch|qcdevops|jenkins|workspace|build_RNUM -1
- Processing $rem in /global/common/software/nersc9/qchem/6.2.1-cpu/config/preferences:
- Processing $rem in /global/homes/j/joeyshin/.qchemrc:
+     Scratch files written to /global/scratch/users/ericwangyz/.qchem_scratch/qchem218158//
+ Processing $rem in /global/scratch/users/rqzhao/software/qchem/config/preferences:
+ Processing $rem in /global/home/users/ericwangyz/.qchemrc:
 
- Q-Chem warning in module libgen/rem_setup.C, line 3388:
+ Q-Chem warning in module libgen/rem_setup.C, line 3387:
 
  Neither GIA nor STOLL is specified by user. Use STOLL as the default
 
@@ -125,48 +118,48 @@ $molecule
 0 1
 -- fragment1
 0 1
-C   -18.7060000   -16.5620000    12.8220000
-C   -19.0610000   -17.1760000    11.6100000
-C   -20.6070000   -17.4730000    11.7370000
-C   -20.9680000   -17.1620000    13.2940000
-C   -19.6720000   -18.4620000    10.9560000
-H   -18.8390000   -15.4800000    12.7750000
-H   -17.6830000   -16.8050000    13.0900000
-H   -18.7540000   -16.4860000    10.8220000
-H   -21.2980000   -16.9070000    11.1330000
-H   -21.6660000   -17.8970000    13.7000000
-H   -21.3920000   -16.1610000    13.3910000
-H   -19.7550000   -18.5640000     9.8770000
-H   -19.4360000   -19.3850000    11.4870000
-H   -19.3590000   -16.9420000    13.5800000
-H   -20.0580000   -17.2220000    13.8530000
+  C   -18.7060000   -16.5620000    12.8220000
+  C   -19.0610000   -17.1760000    11.6100000
+  C   -20.6070000   -17.4730000    11.7370000
+  C   -20.9680000   -17.1620000    13.2940000
+  C   -19.6720000   -18.4620000    10.9560000
+  H   -18.8390000   -15.4800000    12.7750000
+  H   -17.6830000   -16.8050000    13.0900000
+  H   -18.7540000   -16.4860000    10.8220000
+  H   -21.2980000   -16.9070000    11.1330000
+  H   -21.6660000   -17.8970000    13.7000000
+  H   -21.3920000   -16.1610000    13.3910000
+  H   -19.7550000   -18.5640000     9.8770000
+  H   -19.4360000   -19.3850000    11.4870000
+  H   -19.3590000   -16.9420000    13.5800000
+  H   -20.0580000   -17.2220000    13.8530000
 -- fragment2
 0 1
-C   -16.8130000   -19.3590000     7.1760000
-C   -17.1520000   -18.2530000     8.1760000
-H   -16.8910000   -17.2840000     7.7520000
-H   -18.2190000   -18.2730000     8.3840000
-H   -16.5990000   -18.4090000     9.1010000
-H   -17.3590000   -19.2000000     6.2700000
-H   -17.0790000   -20.3090000     7.5910000
-H   -15.7640000   -19.3420000     6.9680000
+  C   -16.8130000   -19.3590000     7.1760000
+  C   -17.1520000   -18.2530000     8.1760000
+  H   -16.8910000   -17.2840000     7.7520000
+  H   -18.2190000   -18.2730000     8.3840000
+  H   -16.5990000   -18.4090000     9.1010000
+  H   -17.3590000   -19.2000000     6.2700000
+  H   -17.0790000   -20.3090000     7.5910000
+  H   -15.7640000   -19.3420000     6.9680000
 $end
 
 $rem
-JOBTYPE          =  eda
-EDA2             =  1
-METHOD           =  wB97M-V
-BASIS            =  def2-TZVPD
-SCF_CONVERGENCE  =  8
-THRESH           =  14
-XC_GRID          =  000099000590
-NL_GRID          =  1
-SYMMETRY         =  false
-EDA_BSSE         =  false
-FD_MAT_VEC_PROD  =  false
-MEM_TOTAL        =  16000
-MEM_STATIC       =  4000
-SCF_PRINT_FRGM   =  true
+   JOBTYPE          =  eda
+   EDA2             =  1
+   METHOD           =  wB97X-V
+   BASIS            =  def2-TZVPD
+   SCF_CONVERGENCE  =  8
+   THRESH           =  14
+   XC_GRID          =  000099000590
+   NL_GRID          =  1
+   SYMMETRY         =  false
+   EDA_BSSE         =  false
+   FD_MAT_VEC_PROD  =  false
+   MEM_TOTAL        =  64000
+   MEM_STATIC       =  100000
+   SCF_PRINT_FRGM   =  true
 $end
 
 --------------------------------------------------------------
@@ -205,9 +198,15 @@ $end
  Requested basis set is def2-TZVPD
  There are 171 shells and 403 basis functions
 
- Total QAlloc Memory Limit  16000 MB
- Mega-Array Size      3911 MB
- MEM_STATIC part      4000 MB
+ Q-Chem warning in module libmdc/get_mega.C, line 167:
+
+ Allowed MEM_STATIC has been capped at MEM_STATIC=8191.
+ Reduce the value of MEM_STATIC to silence this warning.
+
+
+ Total QAlloc Memory Limit  64000 MB
+ Mega-Array Size      8007 MB
+ MEM_STATIC part      8191 MB
 
  A cutoff of  1.0D-14 yielded  13113 shell pairs
  There are     73063 function pairs (     88707 Cartesian)
@@ -274,23 +273,19 @@ eda_pct_a                  0
 eda_covp                   0
 eda_pol_a                  0
 eda_vct_a                  0
-has_sol                    0
 print_level                1
 --------------------------------
- Attempting to make child job directory: /tmp/qchem2095117//Frg1/
- Attempting to make child job directory: /tmp/qchem2095117//Frg2/
- Creating input file /tmp/qchem2095117/Frg1.input
+ Attempting to make child job directory: /global/scratch/users/ericwangyz/.qchem_scratch/qchem218158//Frg1/
+ Attempting to make child job directory: /global/scratch/users/ericwangyz/.qchem_scratch/qchem218158//Frg2/
+ Creating input file /global/scratch/users/ericwangyz/.qchem_scratch/qchem218158/Frg1.input
  using default PutDataFrgm: nothing
- calling putenv with: QCSCRATCH=/tmp/qchem2095117/ 
- calling putenv with: QCLOCALSCR=/tmp/qchem2095117/ 
+ calling putenv with: QCSCRATCH=/global/scratch/users/ericwangyz/.qchem_scratch/qchem218158/ 
  Spawning Job For Fragment 0
                   Welcome to Q-Chem
      A Quantum Leap Into The Future Of Chemistry
 
 
- Q-Chem 6.2, Q-Chem, Inc., Pleasanton, CA (2024)
-
- License issued to: National Energy Research Scientific Computing Center (site)
+ Q-Chem 6.2 (devel), Q-Chem, Inc., Pleasanton, CA (2024)
 
  E. Epifanovsky,  A. T. B. Gilbert,  Xintian Feng,  Joonho Lee,  Yuezhi Mao,  
  N. Mardirossian,  P. Pokhilko,  A. White,  M. Wormit,  M. P. Coons,  
@@ -378,20 +373,19 @@ print_level                1
    J. Chem. Phys. 155, 084801 (2021)
    https://doi.org/10.1063/5.0055522 (open access)
 
- Q-Chem 6.2.1 for Intel X86 EM64T Linux
+ Q-Chem 6.2.0 for Intel X86 EM64T Linux
 
  Parts of Q-Chem use Armadillo 9.900.5 (Nocturnal Misbehaviour).
  http://arma.sourceforge.net/
 
- Q-Chem begins on Tue Sep 30 00:11:44 2025  
+ Q-Chem begins on Wed Jan 21 17:17:26 2026  
 
- Host: login33
+ Host: n0102.savio3
 0
 
-     Scratch files written to /tmp/qchem2095117//Frg1//
- Sep124 |scratch|qcdevops|jenkins|workspace|build_RNUM -1
- Processing $rem in /global/common/software/nersc9/qchem/6.2.1-cpu/config/preferences:
- Processing $rem in /global/homes/j/joeyshin/.qchemrc:
+     Scratch files written to /global/scratch/users/ericwangyz/.qchem_scratch/qchem218158//Frg1//
+ Processing $rem in /global/scratch/users/rqzhao/software/qchem/config/preferences:
+ Processing $rem in /global/home/users/ericwangyz/.qchemrc:
 
  Checking the input file for inconsistencies... 	...done.
 
@@ -418,7 +412,7 @@ $molecule
 $end
 $rem
 EDA2		1
-METHOD		WB97M-V
+METHOD		WB97X-V
 BASIS		DEF2-TZVPD
 SCF_CONVERGENCE		8
 THRESH		14
@@ -436,8 +430,8 @@ CHILD_INSTRUCTION		2
 GEN_SCFMAN		TRUE
 SYM_IGNORE		TRUE
 SCF_CONVERGENCE		8
-MEM_STATIC		4000
-MEM_TOTAL		16000
+MEM_STATIC		8191
+MEM_TOTAL		64000
 PURECART		1111111
 FRGM_METHOD		FALSE
 CHILD_MP		1
@@ -476,9 +470,9 @@ $end
  Requested basis set is def2-TZVPD
  There are 115 shells and 275 basis functions
 
- Total QAlloc Memory Limit  16000 MB
- Mega-Array Size      3911 MB
- MEM_STATIC part      4000 MB
+ Total QAlloc Memory Limit  64000 MB
+ Mega-Array Size      8007 MB
+ MEM_STATIC part      8191 MB
 
 
                        Distance Matrix (Angstroms)
@@ -529,28 +523,28 @@ $end
   Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
   Bang C. Huynh
  -----------------------------------------------------------------------
- Exchange:     0.1500 Hartree-Fock + 1.0000 wB97M-V + LR-HF
- Correlation:  1.0000 wB97M-V
+ Exchange:     0.1670 Hartree-Fock + 1.0000 wB97X-V + LR-HF
+ Correlation:  1.0000 wB97X-V
  Using Euler-Maclaurin-Lebedev (99,590) quadrature formula
  Nonlocal Correlation:  VV10 with C = 0.0100 and b = 6.00 and scale = 1.00000
  Grid used for NLC:  SG-1 standard quadrature
-Energy prior to optimization (guess energy) = -196.231532160972
+Energy prior to optimization (guess energy) = -196.300115218758
 Begin Timing: Total SCF Calculation
 begin iterations for algorithm: DIIS         
 the SCF tolerance is set to 1.00e-08
-    1    -196.2315321610      2.37e-03     00000 
-    2    -196.2584488464      1.79e-03     00000 
-    3    -196.2871105052      2.42e-04     00000 
-    4    -196.2876283821      1.01e-04     00000 
-    5    -196.2877247082      1.84e-05     00000 
-    6    -196.2877283512      3.98e-06     00000 
-    7    -196.2877285895      1.63e-06     00000 
-    8    -196.2877286245      5.71e-07     00000 
-    9    -196.2877286293      1.28e-07     00000 
-   10    -196.2877286296      5.37e-08     00000 
-   11    -196.2877286297      1.19e-08     00000 
-   12    -196.2877286297      3.13e-09     00000 Convergence criterion met
-Timing for Total SCF: 21.00s (wall), 2538.75s (cpu)
+    1    -196.3001152188      2.20e-03     00000 
+    2    -196.3277979874      1.53e-03     00000 
+    3    -196.3484606453      2.39e-04     00000 
+    4    -196.3489898737      9.46e-05     00000 
+    5    -196.3490740886      1.68e-05     00000 
+    6    -196.3490773204      3.98e-06     00000 
+    7    -196.3490775502      1.46e-06     00000 
+    8    -196.3490775793      5.52e-07     00000 
+    9    -196.3490775837      1.07e-07     00000 
+   10    -196.3490775840      4.33e-08     00000 
+   11    -196.3490775840      1.08e-08     00000 
+   12    -196.3490775840      2.53e-09     00000 Convergence criterion met
+Timing for Total SCF: 44.00s (wall), 694.98s (cpu)
 Multipole orders to be included
         2
         3
@@ -560,22 +554,22 @@ total number of RHS in solve_reponses: 8
 RHS batch sizes
         8
 Beginning Block Conjugate Gradient Iterations. Batch Number: 0
-              1      3.98e-01     00000 Conjugate Gradient Iteration
+              1      4.00e-01     00000 Conjugate Gradient Iteration
               2      1.41e-01     00000 Conjugate Gradient Iteration
-              3      3.10e-02     00000 Conjugate Gradient Iteration
-              4      6.95e-03     00000 Conjugate Gradient Iteration
-              5      1.25e-03     00000 Conjugate Gradient Iteration
-              6      2.64e-04     00000 Conjugate Gradient Iteration
-              7      5.27e-05     00000 Conjugate Gradient Iteration
-              8      6.81e-06     00000 Conjugate Gradient Iteration
-              9      9.62e-07     00000 Conjugate Gradient Iteration
-             10      1.60e-07     00000 Conjugate Gradient Iteration
-             11      2.17e-08     00000 Conjugate Gradient Iteration
-             12      3.56e-09     00000 CG Converged
+              3      3.18e-02     00000 Conjugate Gradient Iteration
+              4      6.69e-03     00000 Conjugate Gradient Iteration
+              5      1.18e-03     00000 Conjugate Gradient Iteration
+              6      2.45e-04     00000 Conjugate Gradient Iteration
+              7      4.85e-05     00000 Conjugate Gradient Iteration
+              8      6.71e-06     00000 Conjugate Gradient Iteration
+              9      1.06e-06     00000 Conjugate Gradient Iteration
+             10      1.61e-07     00000 Conjugate Gradient Iteration
+             11      2.31e-08     00000 Conjugate Gradient Iteration
+             12      3.33e-09     00000 CG Converged
 batch 0 complete
 Done Calculating Responses
 TESTING ORTHOGONALIZATION OF MULTIPOLE BASIS
-Max deviation in metric = 1.80e-09
+Max deviation in metric = 1.73e-09
 Multipole virts passed orthogonality test
 Virts Per Order
            60
@@ -588,63 +582,63 @@ Virts Per Order
  
  Alpha MOs
  -- Occupied --
--10.3656 -10.3535 -10.3381 -10.3339 -10.3007  -0.9825  -0.8721  -0.8237
- -0.7092  -0.6491  -0.6313  -0.5786  -0.5343  -0.5165  -0.5028  -0.4725
- -0.4336  -0.3939  -0.3464  -0.3289
+-10.2928 -10.2800 -10.2637 -10.2604 -10.2262  -0.9941  -0.8822  -0.8336
+ -0.7177  -0.6566  -0.6383  -0.5848  -0.5397  -0.5222  -0.5087  -0.4780
+ -0.4384  -0.3979  -0.3497  -0.3321
  -- Virtual --
-  0.0404   0.0573   0.0656   0.0673   0.0840   0.1059   0.1139   0.1236
-  0.1259   0.1534   0.1634   0.1644   0.1694   0.1738   0.1828   0.1862
-  0.1977   0.2090   0.2321   0.2351   0.2412   0.2518   0.2605   0.2633
-  0.2711   0.2787   0.2825   0.2838   0.2851   0.2992   0.3099   0.3159
-  0.3173   0.3316   0.3390   0.3505   0.3542   0.3635   0.3672   0.3722
-  0.3782   0.3882   0.3947   0.3955   0.4039   0.4117   0.4147   0.4180
-  0.4225   0.4293   0.4411   0.4431   0.4526   0.4615   0.4631   0.4731
-  0.4780   0.4868   0.4995   0.5037   0.5084   0.5172   0.5185   0.5239
-  0.5381   0.5457   0.5544   0.5588   0.5622   0.5811   0.5889   0.6058
-  0.6122   0.6293   0.6445   0.6604   0.6655   0.6968   0.7039   0.7073
-  0.7183   0.7246   0.7313   0.7330   0.7365   0.7526   0.7650   0.7755
-  0.7789   0.7812   0.7888   0.7916   0.8035   0.8163   0.8204   0.8323
-  0.8382   0.8462   0.8718   0.8901   0.9100   0.9182   0.9446   0.9596
-  1.0213   1.0429   1.0560   1.0848   1.1223   1.1426   1.1632   1.1861
-  1.2339   1.2466   1.2755   1.2861   1.3325   1.3494   1.3610   1.3714
-  1.3798   1.3979   1.4290   1.4434   1.4494   1.4847   1.5250   1.5383
-  1.5904   1.6400   1.6999   1.7691   1.7994   1.8525   1.8746   1.9069
-  1.9210   1.9313   1.9404   1.9438   1.9661   1.9808   1.9848   2.0091
-  2.0258   2.0315   2.0432   2.0645   2.0885   2.1172   2.1377   2.2104
-  2.2336   2.2449   2.2818   2.3091   2.3431   2.3919   2.4219   2.4404
-  2.4450   2.4626   2.4921   2.5060   2.5322   2.5709   2.5732   2.6167
-  2.6385   2.6439   2.6802   2.7000   2.7100   2.7304   2.7454   2.7725
-  2.7779   2.8081   2.8163   2.8505   2.8634   2.9022   2.9192   2.9618
-  2.9841   2.9966   3.0435   3.0636   3.0655   3.1297   3.1625   3.2159
-  3.2303   3.2331   3.2686   3.2783   3.3170   3.3356   3.3640   3.3839
-  3.3922   3.4239   3.4279   3.4524   3.4760   3.4863   3.5237   3.5465
-  3.5623   3.5806   3.6137   3.6733   3.6846   3.7063   3.7410   3.7538
-  3.7847   3.8339   3.8672   3.8856   3.9597   3.9725   4.0065   4.0421
-  4.0903   4.0974   4.1232   4.1948   4.2323   4.2618   4.3133   4.3453
-  4.4008   4.4112   4.4456   4.4793   4.5432   4.5700   4.6223   4.6466
-  4.7046   4.7181   4.7908   4.8639   4.9568   5.0654   5.1185   5.2073
-  5.2258   5.2803  22.8578  22.8873  23.0481  23.1926  23.3652
+  0.0630   0.0810   0.0895   0.0908   0.1073   0.1293   0.1368   0.1466
+  0.1502   0.1713   0.1813   0.1876   0.1930   0.1976   0.2060   0.2087
+  0.2189   0.2285   0.2535   0.2571   0.2633   0.2745   0.2814   0.2834
+  0.2946   0.2995   0.3032   0.3072   0.3102   0.3219   0.3352   0.3403
+  0.3424   0.3513   0.3681   0.3721   0.3788   0.3857   0.3934   0.3971
+  0.4001   0.4150   0.4187   0.4214   0.4264   0.4341   0.4430   0.4445
+  0.4494   0.4567   0.4624   0.4671   0.4777   0.4887   0.4911   0.5000
+  0.5049   0.5125   0.5248   0.5308   0.5357   0.5458   0.5472   0.5532
+  0.5671   0.5752   0.5830   0.5853   0.5914   0.6107   0.6179   0.6336
+  0.6382   0.6589   0.6731   0.6890   0.6950   0.7237   0.7319   0.7337
+  0.7448   0.7513   0.7588   0.7595   0.7644   0.7811   0.7929   0.8041
+  0.8069   0.8096   0.8171   0.8203   0.8324   0.8448   0.8494   0.8618
+  0.8671   0.8750   0.8994   0.9175   0.9379   0.9465   0.9729   0.9870
+  1.0478   1.0682   1.0824   1.1091   1.1472   1.1679   1.1895   1.2124
+  1.2594   1.2719   1.3022   1.3154   1.3587   1.3781   1.3888   1.4012
+  1.4078   1.4263   1.4570   1.4715   1.4790   1.5139   1.5543   1.5693
+  1.6213   1.6716   1.7276   1.7974   1.8328   1.8822   1.9052   1.9389
+  1.9513   1.9646   1.9720   1.9792   1.9978   2.0119   2.0168   2.0413
+  2.0577   2.0641   2.0737   2.0952   2.1205   2.1478   2.1681   2.2411
+  2.2674   2.2778   2.3187   2.3476   2.3810   2.4300   2.4578   2.4789
+  2.4830   2.4973   2.5321   2.5434   2.5735   2.6081   2.6161   2.6592
+  2.6796   2.6872   2.7238   2.7412   2.7490   2.7694   2.7860   2.8152
+  2.8184   2.8545   2.8602   2.8946   2.9088   2.9444   2.9615   3.0032
+  3.0256   3.0373   3.0854   3.1055   3.1090   3.1723   3.2044   3.2584
+  3.2720   3.2754   3.3103   3.3212   3.3581   3.3793   3.4067   3.4271
+  3.4374   3.4699   3.4737   3.4987   3.5205   3.5313   3.5693   3.5942
+  3.6079   3.6264   3.6606   3.7208   3.7319   3.7538   3.7889   3.8055
+  3.8351   3.8907   3.9171   3.9363   4.0106   4.0221   4.0599   4.0939
+  4.1480   4.1527   4.1783   4.2484   4.2974   4.3206   4.3845   4.4116
+  4.4652   4.4795   4.5189   4.5484   4.6198   4.6468   4.7053   4.7242
+  4.7846   4.7965   4.8645   4.9370   5.0256   5.1393   5.1870   5.2719
+  5.2969   5.3517  22.6612  22.6903  22.8503  22.9942  23.1659
  --------------------------------------------------------------
  
           Ground-State Mulliken Net Atomic Charges
 
      Atom                 Charge (a.u.)
   ----------------------------------------
-      1 C                    -0.900250
-      2 C                     0.006970
-      3 C                    -0.115733
-      4 C                    -0.998592
-      5 C                    -0.581227
-      6 H                     0.298429
-      7 H                     0.366967
-      8 H                     0.228096
-      9 H                     0.296119
-     10 H                     0.350755
-     11 H                     0.307183
-     12 H                     0.268097
-     13 H                     0.226788
-     14 H                    -0.116659
-     15 H                     0.363058
+      1 C                    -0.496099
+      2 C                     0.065534
+      3 C                    -0.037784
+      4 C                    -0.479038
+      5 C                    -0.524668
+      6 H                     0.199992
+      7 H                     0.186396
+      8 H                     0.208182
+      9 H                     0.256681
+     10 H                     0.202413
+     11 H                     0.222922
+     12 H                     0.189393
+     13 H                     0.166613
+     14 H                    -0.324662
+     15 H                     0.164124
   ----------------------------------------
   Sum of atomic charges =     0.000000
 
@@ -654,25 +648,25 @@ Virts Per Order
     Charge (ESU x 10^10)
                 -0.0000
     Dipole Moment (Debye)
-         X      -0.3056      Y       0.0144      Z       0.2340
-       Tot       0.3852
+         X      -0.3050      Y       0.0170      Z       0.2435
+       Tot       0.3906
     Quadrupole Moments (Debye-Ang)
-        XX     -31.6917     XY       1.6570     YY     -36.2202
-        XZ       0.0068     YZ      -0.2776     ZZ     -33.3739
+        XX     -31.3771     XY       1.6426     YY     -35.8993
+        XZ      -0.0142     YZ      -0.2870     ZZ     -33.0205
     Octopole Moments (Debye-Ang^2)
-       XXX     166.0958    XXY      -4.7409    XYY      63.0211
-       YYY      -4.6397    XXZ       2.2301    XYZ       0.7964
-       YYZ       2.3056    XZZ      55.8439    YZZ      -1.0391
-       ZZZ       2.2643
+       XXX     164.4830    XXY      -4.6486    XYY      62.4767
+       YYY      -4.6233    XXZ       2.3167    XYZ       0.8284
+       YYZ       2.2979    XZZ      55.2423    YZZ      -1.0299
+       ZZZ       2.2492
     Hexadecapole Moments (Debye-Ang^3)
-      XXXX    -864.0307   XXXY      11.2938   XXYY    -197.4088
-      XYYY      -0.7649   YYYY    -267.0706   XXXZ      -5.4090
-      XXYZ      -3.0169   XYYZ      -1.3695   YYYZ      -5.9409
-      XXZZ    -155.0836   XYZZ      -0.8004   YYZZ     -54.4093
-      XZZZ      -0.5109   YZZZ      -4.3697   ZZZZ     -82.7833
+      XXXX    -854.4144   XXXY      10.9887   XXYY    -195.1276
+      XYYY      -0.8488   YYYY    -263.2991   XXXZ      -5.7457
+      XXYZ      -3.1605   XYYZ      -1.3893   YYYZ      -5.8762
+      XXZZ    -152.9923   XYZZ      -0.8112   YYZZ     -53.3182
+      XZZZ      -0.5996   YZZZ      -4.3509   ZZZZ     -80.6637
  -----------------------------------------------------------------
- Total job time:  134.12s(wall), 15103.98s(cpu) 
- Tue Sep 30 00:13:58 2025
+ Total job time:  217.13s(wall), 3443.74s(cpu) 
+ Wed Jan 21 17:21:03 2026
 
         *************************************************************
         *                                                           *
@@ -682,21 +676,17 @@ Virts Per Order
 
 
  Done Job For Fragment 0
- calling putenv with: QCSCRATCH=/pscratch/sd/j/joeyshin 
- calling putenv with: QCLOCALSCR=/tmp 
- calling putenv with: QCTHREADS=128 
- Creating input file /tmp/qchem2095117/Frg2.input
+ calling putenv with: QCSCRATCH=/global/scratch/users/ericwangyz/.qchem_scratch 
+ calling putenv with: QCTHREADS=16 
+ Creating input file /global/scratch/users/ericwangyz/.qchem_scratch/qchem218158/Frg2.input
  using default PutDataFrgm: nothing
- calling putenv with: QCSCRATCH=/tmp/qchem2095117/ 
- calling putenv with: QCLOCALSCR=/tmp/qchem2095117/ 
+ calling putenv with: QCSCRATCH=/global/scratch/users/ericwangyz/.qchem_scratch/qchem218158/ 
  Spawning Job For Fragment 1
                   Welcome to Q-Chem
      A Quantum Leap Into The Future Of Chemistry
 
 
- Q-Chem 6.2, Q-Chem, Inc., Pleasanton, CA (2024)
-
- License issued to: National Energy Research Scientific Computing Center (site)
+ Q-Chem 6.2 (devel), Q-Chem, Inc., Pleasanton, CA (2024)
 
  E. Epifanovsky,  A. T. B. Gilbert,  Xintian Feng,  Joonho Lee,  Yuezhi Mao,  
  N. Mardirossian,  P. Pokhilko,  A. White,  M. Wormit,  M. P. Coons,  
@@ -784,20 +774,19 @@ Virts Per Order
    J. Chem. Phys. 155, 084801 (2021)
    https://doi.org/10.1063/5.0055522 (open access)
 
- Q-Chem 6.2.1 for Intel X86 EM64T Linux
+ Q-Chem 6.2.0 for Intel X86 EM64T Linux
 
  Parts of Q-Chem use Armadillo 9.900.5 (Nocturnal Misbehaviour).
  http://arma.sourceforge.net/
 
- Q-Chem begins on Tue Sep 30 00:13:58 2025  
+ Q-Chem begins on Wed Jan 21 17:21:09 2026  
 
- Host: login33
+ Host: n0102.savio3
 0
 
-     Scratch files written to /tmp/qchem2095117//Frg2//
- Sep124 |scratch|qcdevops|jenkins|workspace|build_RNUM -1
- Processing $rem in /global/common/software/nersc9/qchem/6.2.1-cpu/config/preferences:
- Processing $rem in /global/homes/j/joeyshin/.qchemrc:
+     Scratch files written to /global/scratch/users/ericwangyz/.qchem_scratch/qchem218158//Frg2//
+ Processing $rem in /global/scratch/users/rqzhao/software/qchem/config/preferences:
+ Processing $rem in /global/home/users/ericwangyz/.qchemrc:
 
  Checking the input file for inconsistencies... 	...done.
 
@@ -817,7 +806,7 @@ $molecule
 $end
 $rem
 EDA2		1
-METHOD		WB97M-V
+METHOD		WB97X-V
 BASIS		DEF2-TZVPD
 SCF_CONVERGENCE		8
 THRESH		14
@@ -835,8 +824,8 @@ CHILD_INSTRUCTION		2
 GEN_SCFMAN		TRUE
 SYM_IGNORE		TRUE
 SCF_CONVERGENCE		8
-MEM_STATIC		4000
-MEM_TOTAL		16000
+MEM_STATIC		8191
+MEM_TOTAL		64000
 PURECART		1111111
 FRGM_METHOD		FALSE
 CHILD_MP		1
@@ -868,9 +857,9 @@ $end
  Requested basis set is def2-TZVPD
  There are 56 shells and 128 basis functions
 
- Total QAlloc Memory Limit  16000 MB
- Mega-Array Size      3911 MB
- MEM_STATIC part      4000 MB
+ Total QAlloc Memory Limit  64000 MB
+ Mega-Array Size      8007 MB
+ MEM_STATIC part      8191 MB
 
 
                        Distance Matrix (Angstroms)
@@ -904,25 +893,25 @@ $end
   Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
   Bang C. Huynh
  -----------------------------------------------------------------------
- Exchange:     0.1500 Hartree-Fock + 1.0000 wB97M-V + LR-HF
- Correlation:  1.0000 wB97M-V
+ Exchange:     0.1670 Hartree-Fock + 1.0000 wB97X-V + LR-HF
+ Correlation:  1.0000 wB97X-V
  Using Euler-Maclaurin-Lebedev (99,590) quadrature formula
  Nonlocal Correlation:  VV10 with C = 0.0100 and b = 6.00 and scale = 1.00000
  Grid used for NLC:  SG-1 standard quadrature
-Energy prior to optimization (guess energy) = -79.760263269467
+Energy prior to optimization (guess energy) = -79.802954533726
 Begin Timing: Total SCF Calculation
 begin iterations for algorithm: DIIS         
 the SCF tolerance is set to 1.00e-08
-    1     -79.7602632695      3.87e-03     00000 
-    2     -79.7749972583      2.81e-03     00000 
-    3     -79.7904113890      1.33e-04     00000 
-    4     -79.7904669344      2.72e-05     00000 
-    5     -79.7904693246      6.97e-06     00000 
-    6     -79.7904694729      3.29e-06     00000 
-    7     -79.7904694985      3.92e-07     00000 
-    8     -79.7904694994      3.95e-08     00000 
-    9     -79.7904694994      4.30e-09     00000 Convergence criterion met
-Timing for Total SCF: 4.00s (wall), 585.98s (cpu)
+    1     -79.8029545337      3.49e-03     00000 
+    2     -79.8168406023      2.36e-03     00000 
+    3     -79.8275145215      1.40e-04     00000 
+    4     -79.8275774070      2.43e-05     00000 
+    5     -79.8275795843      6.58e-06     00000 
+    6     -79.8275797240      2.73e-06     00000 
+    7     -79.8275797416      4.28e-07     00000 
+    8     -79.8275797425      3.93e-08     00000 
+    9     -79.8275797425      4.27e-09     00000 Convergence criterion met
+Timing for Total SCF: 5.00s (wall), 89.50s (cpu)
 Multipole orders to be included
         2
         3
@@ -932,20 +921,20 @@ total number of RHS in solve_reponses: 8
 RHS batch sizes
         8
 Beginning Block Conjugate Gradient Iterations. Batch Number: 0
-              1      3.12e-01     00000 Conjugate Gradient Iteration
+              1      3.15e-01     00000 Conjugate Gradient Iteration
               2      1.02e-01     00000 Conjugate Gradient Iteration
-              3      1.96e-02     00000 Conjugate Gradient Iteration
-              4      2.88e-03     00000 Conjugate Gradient Iteration
-              5      3.82e-04     00000 Conjugate Gradient Iteration
-              6      3.74e-05     00000 Conjugate Gradient Iteration
-              7      3.42e-06     00000 Conjugate Gradient Iteration
-              8      4.26e-07     00000 Conjugate Gradient Iteration
-              9      5.15e-08     00000 Conjugate Gradient Iteration
-             10      5.89e-09     00000 CG Converged
+              3      2.06e-02     00000 Conjugate Gradient Iteration
+              4      3.12e-03     00000 Conjugate Gradient Iteration
+              5      4.31e-04     00000 Conjugate Gradient Iteration
+              6      4.69e-05     00000 Conjugate Gradient Iteration
+              7      6.08e-06     00000 Conjugate Gradient Iteration
+              8      9.56e-07     00000 Conjugate Gradient Iteration
+              9      9.54e-08     00000 Conjugate Gradient Iteration
+             10      6.92e-09     00000 CG Converged
 batch 0 complete
 Done Calculating Responses
 TESTING ORTHOGONALIZATION OF MULTIPOLE BASIS
-Max deviation in metric = 1.76e-10
+Max deviation in metric = 1.26e-10
 Multipole virts passed orthogonality test
 Virts Per Order
         27
@@ -958,38 +947,38 @@ Virts Per Order
  
  Alpha MOs
  -- Occupied --
--10.3241 -10.3184  -0.8768  -0.7296  -0.5456  -0.5451  -0.4577  -0.4438
- -0.4430
+-10.2507 -10.2447  -0.8880  -0.7389  -0.5518  -0.5513  -0.4625  -0.4493
+ -0.4485
  -- Virtual --
-  0.0483   0.0696   0.1139   0.1142   0.1375   0.1375   0.1558   0.1788
-  0.1792   0.2056   0.2182   0.2183   0.2570   0.2573   0.2647   0.2907
-  0.3140   0.3157   0.3201   0.3432   0.3436   0.3509   0.3511   0.3692
-  0.3694   0.3772   0.4008   0.4158   0.4159   0.4193   0.4524   0.4526
-  0.4721   0.4724   0.4773   0.5105   0.5106   0.5168   0.6388   0.6397
-  0.6665   0.7332   0.7455   0.7460   0.7481   0.7571   0.7690   0.7694
-  0.8109   0.8118   0.8484   0.9941   0.9957   1.0384   1.0410   1.2180
-  1.2308   1.2311   1.2503   1.2516   1.3804   1.7085   1.7222   1.8295
-  1.8615   1.8672   1.8686   1.8805   1.8808   1.9273   1.9684   1.9690
-  1.9856   2.1761   2.2000   2.2007   2.3546   2.4357   2.5358   2.5435
-  2.5571   2.5580   2.5851   2.5883   2.7018   2.7045   2.7640   2.7651
-  2.8040   2.8060   2.8170   3.0360   3.1147   3.2172   3.2180   3.2464
-  3.2468   3.3081   3.3595   3.4299   3.5114   3.5135   3.6178   3.6253
-  3.6294   3.8739   3.8785   4.0437   4.0439   4.0900   4.3957   4.4355
-  4.4391   4.5767   4.5815   4.8134   4.9168  22.7632  22.8468
+  0.0717   0.0934   0.1380   0.1382   0.1617   0.1618   0.1801   0.2025
+  0.2029   0.2301   0.2418   0.2419   0.2822   0.2825   0.2863   0.3086
+  0.3389   0.3413   0.3496   0.3616   0.3619   0.3719   0.3722   0.3947
+  0.3969   0.3972   0.4292   0.4457   0.4458   0.4496   0.4781   0.4782
+  0.4990   0.4994   0.5048   0.5356   0.5358   0.5377   0.6678   0.6687
+  0.6903   0.7561   0.7732   0.7757   0.7767   0.7858   0.7946   0.7949
+  0.8354   0.8363   0.8750   1.0162   1.0179   1.0630   1.0656   1.2439
+  1.2554   1.2556   1.2807   1.2821   1.4125   1.7325   1.7455   1.8606
+  1.8960   1.8970   1.8978   1.9086   1.9088   1.9607   1.9992   1.9997
+  2.0166   2.2167   2.2359   2.2366   2.4112   2.4821   2.5724   2.5788
+  2.6020   2.6044   2.6338   2.6372   2.7394   2.7424   2.8073   2.8083
+  2.8461   2.8479   2.8545   3.0798   3.1534   3.2606   3.2614   3.2869
+  3.2873   3.3505   3.4074   3.4715   3.5604   3.5627   3.6643   3.6734
+  3.6775   3.9216   3.9262   4.0998   4.1000   4.1391   4.4842   4.5275
+  4.5313   4.6670   4.6719   4.9077   4.9911  22.5674  22.6505
  --------------------------------------------------------------
  
           Ground-State Mulliken Net Atomic Charges
 
      Atom                 Charge (a.u.)
   ----------------------------------------
-      1 C                    -0.859378
-      2 C                    -0.810773
-      3 H                     0.270578
-      4 H                     0.270246
-      5 H                     0.272050
-      6 H                     0.286194
-      7 H                     0.285405
-      8 H                     0.285679
+      1 C                    -0.568450
+      2 C                    -0.541922
+      3 H                     0.181255
+      4 H                     0.180297
+      5 H                     0.182236
+      6 H                     0.189745
+      7 H                     0.188743
+      8 H                     0.188096
   ----------------------------------------
   Sum of atomic charges =     0.000000
 
@@ -999,25 +988,25 @@ Virts Per Order
     Charge (ESU x 10^10)
                 -0.0000
     Dipole Moment (Debye)
-         X       0.0208      Y       0.0137      Z      -0.0056
-       Tot       0.0255
+         X       0.0203      Y       0.0135      Z      -0.0054
+       Tot       0.0249
     Quadrupole Moments (Debye-Ang)
-        XX     -15.6199     XY      -0.3340     YY     -15.1566
-        XZ       0.2803     YZ       0.1497     ZZ     -15.0600
+        XX     -15.4764     XY      -0.3399     YY     -15.0006
+        XZ       0.2853     YZ       0.1516     ZZ     -14.9025
     Octopole Moments (Debye-Ang^2)
-       XXX    -178.3493    XXY      -1.4041    XYY     -57.3543
-       YYY       3.8273    XXZ       1.4104    XYZ       0.5035
-       YYZ      -0.7806    XZZ     -57.0149    YZZ       1.2487
-       ZZZ      -2.2201
+       XXX    -176.7010    XXY      -1.4590    XYY     -56.7652
+       YYY       3.7855    XXZ       1.4519    XYZ       0.5093
+       YYZ      -0.7724    XZZ     -56.4204    YZZ       1.2336
+       ZZZ      -2.1933
     Hexadecapole Moments (Debye-Ang^3)
-      XXXX   -1431.0121   XXXY     -13.1503   XXYY    -236.3893
-      XYYY       3.1696   YYYY     -43.3486   XXXZ      12.0339
-      XXYZ       4.3371   XYYZ       0.0924   YYYZ       4.2679
-      XXZZ    -235.0646   XYZZ       1.4548   YYZZ     -12.1042
-      XZZZ       0.4831   YZZZ       3.3622   ZZZZ     -37.3820
+      XXXX   -1417.2798   XXXY     -13.4519   XXYY    -233.7850
+      XYYY       3.1337   YYYY     -42.4999   XXXZ      12.2121
+      XXYZ       4.3884   XYYZ       0.1015   YYYZ       4.2182
+      XXZZ    -232.4766   XYZZ       1.4577   YYZZ     -11.7725
+      XZZZ       0.5058   YZZZ       3.2772   ZZZZ     -36.5540
  -----------------------------------------------------------------
- Total job time:  24.12s(wall), 2673.74s(cpu) 
- Tue Sep 30 00:14:22 2025
+ Total job time:  27.25s(wall), 428.22s(cpu) 
+ Wed Jan 21 17:21:37 2026
 
         *************************************************************
         *                                                           *
@@ -1027,12 +1016,11 @@ Virts Per Order
 
 
  Done Job For Fragment 1
- calling putenv with: QCSCRATCH=/pscratch/sd/j/joeyshin 
- calling putenv with: QCLOCALSCR=/tmp 
- calling putenv with: QCTHREADS=128 
+ calling putenv with: QCSCRATCH=/global/scratch/users/ericwangyz/.qchem_scratch 
+ calling putenv with: QCTHREADS=16 
 Doing General SCFMI
- Exchange:     0.1500 Hartree-Fock + 1.0000 wB97M-V + LR-HF
- Correlation:  1.0000 wB97M-V
+ Exchange:     0.1670 Hartree-Fock + 1.0000 wB97X-V + LR-HF
+ Correlation:  1.0000 wB97X-V
  Using Euler-Maclaurin-Lebedev (99,590) quadrature formula
  Nonlocal Correlation:  VV10 with C = 0.0100 and b = 6.00 and scale = 1.00000
  Grid used for NLC:  SG-1 standard quadrature
@@ -1040,72 +1028,71 @@ performing fock build before subrot guess so that all methods have access
 Printing subrot_rss_gen Method Specification:
 Occupied Subspace Method is 0
 Virtual Subspace Method is 0
-Energy of the unrelaxed supersystem initial determinant -276.078240599817
+Energy of the unrelaxed supersystem initial determinant -276.176737209289
 write pseudocanon occs and virts to disk
 write pseudocanon orbital energies to disk
 Tolerance of ortho_decomp_scf: 1.00e-06
 GDM subspace size: 20
 Beginning the Orthogonal Decomposition of the Initial Supersystem Wavefunction
-    1    -276.0700402877      2.66e-02     ortho_decomp Preconditoned Steepest Descent
-    2    -276.0708412309      5.85e-04     ortho_decomp BFGS Step
-    3    -276.0708433419      4.85e-05     ortho_decomp BFGS Step
-    4    -276.0708433476      2.04e-06     ortho_decomp BFGS Step
-    5    -276.0708433476      6.61e-08     ortho_decomp 00000 Convergence criterion met
+    1    -276.1690386087      2.58e-02     ortho_decomp Preconditoned Steepest Descent
+    2    -276.1697791302      5.48e-04     ortho_decomp BFGS Step
+    3    -276.1697809022      4.30e-05     ortho_decomp BFGS Step
+    4    -276.1697809068      1.81e-06     ortho_decomp BFGS Step
+    5    -276.1697809068      6.36e-08     ortho_decomp 00000 Convergence criterion met
  Hartree-Fock
  Hartree-Fock
  Hartree-Fock
 Doing General SCFMI
- Exchange:     0.1500 Hartree-Fock + 1.0000 wB97M-V + LR-HF
- Correlation:  1.0000 wB97M-V
+ Exchange:     0.1670 Hartree-Fock + 1.0000 wB97X-V + LR-HF
+ Correlation:  1.0000 wB97X-V
  Using Euler-Maclaurin-Lebedev (99,590) quadrature formula
  Nonlocal Correlation:  VV10 with C = 0.0100 and b = 6.00 and scale = 1.00000
  Grid used for NLC:  SG-1 standard quadrature
 performing fock build at end of subrot_r(subrot) constructor so that all methods have access
 <S^2> of initial wavefunction before polarization iterations 0.0000000000
 Beginning iterations for the determination of the polarized wavefunction
-Energy prior to optimization (guess energy) = -276.078240599817
+Energy prior to optimization (guess energy) = -276.176737209289
 Begin Timing: Total SCF Calculation
 begin iterations for algorithm: DIIS         
 the SCF tolerance is set to 1.00e-08
-    1    -276.0782405998      5.16e-05     00000 
-    2    -276.0783470334      2.03e-05     00000 
-    3    -276.0783558542      9.36e-06     00000 
-    4    -276.0783581693      2.12e-06     00000 
-    5    -276.0783583321      1.02e-06     00000 
-    6    -276.0783583735      3.38e-07     00000 
-    7    -276.0783583783      1.04e-07     00000 
-    8    -276.0783583787      4.51e-08     00000 
-    9    -276.0783583787      1.14e-08     00000 
-   10    -276.0783583787      3.48e-09     00000 Convergence criterion met
+    1    -276.1767372093      4.71e-05     00000 
+    2    -276.1768281908      1.85e-05     00000 
+    3    -276.1768363032      8.44e-06     00000 
+    4    -276.1768383906      2.18e-06     00000 
+    5    -276.1768385762      1.02e-06     00000 
+    6    -276.1768386160      3.26e-07     00000 
+    7    -276.1768386198      9.61e-08     00000 
+    8    -276.1768386200      3.99e-08     00000 
+    9    -276.1768386201      1.07e-08     00000 
+   10    -276.1768386201      2.99e-09     00000 Convergence criterion met
 write pseudocanon occs and virts to disk
 write pseudocanon orbital energies to disk
-Timing for Total SCF: 35.00s (wall), 3858.24s (cpu)
+Timing for Total SCF: 89.00s (wall), 1399.68s (cpu)
 <S^2> of polarized wavefunction after polarization iterations 0.0000000000
 relaxing scfmi constraint to allow all rotations in the entire AO span
 Doing General SCFMI
- Exchange:     0.1500 Hartree-Fock + 1.0000 wB97M-V + LR-HF
- Correlation:  1.0000 wB97M-V
+ Exchange:     0.1670 Hartree-Fock + 1.0000 wB97X-V + LR-HF
+ Correlation:  1.0000 wB97X-V
  Using Euler-Maclaurin-Lebedev (99,590) quadrature formula
  Nonlocal Correlation:  VV10 with C = 0.0100 and b = 6.00 and scale = 1.00000
  Grid used for NLC:  SG-1 standard quadrature
 performing fock build at end of subrot_r(subrot) constructor so that all methods have access
 <S^2> of polarized wavefunction before ct-allowed iterations 0.0000000000
 Beginning iterations for the determination of the CT-Allowed wavefunction
-Energy prior to optimization (guess energy) = -276.078358378715
+Energy prior to optimization (guess energy) = -276.176838620069
 Begin Timing: Total SCF Calculation
 begin iterations for algorithm: DIIS         
 the SCF tolerance is set to 1.00e-08
-    1    -276.0783583787      6.73e-05     00000 
-    2    -276.0788207763      8.31e-06     00000 
-    3    -276.0788343516      1.20e-06     00000 
-    4    -276.0788346007      5.98e-07     00000 
-    5    -276.0788346303      9.84e-08     00000 
-    6    -276.0788346316      2.92e-08     00000 
-    7    -276.0788346316      1.03e-08     00000 
-    8    -276.0788346317      2.43e-09     00000 Convergence criterion met
+    1    -276.1768386201      7.00e-05     00000 
+    2    -276.1772876715      8.18e-06     00000 
+    3    -276.1773004715      1.10e-06     00000 
+    4    -276.1773007245      3.52e-07     00000 
+    5    -276.1773007353      9.88e-08     00000 
+    6    -276.1773007365      1.65e-08     00000 
+    7    -276.1773007365      7.04e-09     00000 Convergence criterion met
 write pseudocanon occs and virts to disk
 write pseudocanon orbital energies to disk
-Timing for Total SCF: 28.00s (wall), 3081.14s (cpu)
+Timing for Total SCF: 60.00s (wall), 951.65s (cpu)
 <S^2> of ct_allowed wavefunction after ct-allowed iterations 0.0000000000
 
 ================================
@@ -1114,14 +1101,14 @@ Timing for Total SCF: 28.00s (wall), 3081.14s (cpu)
 Basic EDA Quantities
 --------------------
 Fragment Energies (Ha):
-1   -196.2877286297
-2    -79.7904694994
+1   -196.3490775840
+2    -79.8275797425
 --------------------
   E_prp (kJ/mol) = -0.0000
-  E_frz (kJ/mol) = -0.1115
-  E_pol (kJ/mol) = -0.3092
-  E_vct (kJ/mol) = -1.2504
-  E_int (kJ/mol) = -1.6712
+  E_frz (kJ/mol) = -0.2097
+  E_pol (kJ/mol) = -0.2663
+  E_vct (kJ/mol) = -1.2133
+  E_int (kJ/mol) = -1.6893
 --------------------
 
 
@@ -1130,26 +1117,26 @@ Decomposition of frozen interaction energy
   --------------------
   Orthogonal Frozen Decomposition:
   --------------------
-     E_elec   (ELEC)   (kJ/mol) = -7.7815
-     E_pauli  (PAULI)  (kJ/mol) = 14.8048
-     E_disp   (DISP)   (kJ/mol) = -7.1348
+     E_elec   (ELEC)   (kJ/mol) = -7.0901
+     E_pauli  (PAULI)  (kJ/mol) = 13.8482
+     E_disp   (DISP)   (kJ/mol) = -6.9677
   --------------------
   Classical Frozen Decomposition:
   --------------------
-     E_cls_elec  (CLS ELEC)  (kJ/mol) = -1.7869
-     E_mod_pauli (MOD PAULI) (kJ/mol) = 8.8102 (FRZ - CLS ELEC - DISP)
-     E_disp      (DISP)      (kJ/mol) = -7.1348
+     E_cls_elec  (CLS ELEC)  (kJ/mol) = -1.5133
+     E_mod_pauli (MOD PAULI) (kJ/mol) = 8.2713 (FRZ - CLS ELEC - DISP)
+     E_disp      (DISP)      (kJ/mol) = -6.9677
   --------------------
 --------------------
 
 Simplified EDA Summary (kJ/mol)
 --------------------
  PREPARATION      -0.0000
- FROZEN           -0.1115 (ELEC + PAULI + DISP)
-[ELEC + PAULI = 7.0232, DISP = -7.1348]
- POLARIZATION    -0.3092
- CHARGE TRANSFER -1.2504
- TOTAL           -1.6712     (PRP + FRZ + POL + CT)
+ FROZEN           -0.2097 (ELEC + PAULI + DISP)
+[ELEC + PAULI = 6.7580, DISP = -6.9677]
+ POLARIZATION    -0.2663
+ CHARGE TRANSFER -1.2133
+ TOTAL           -1.6893     (PRP + FRZ + POL + CT)
 --------------------
  
  --------------------------------------------------------------
@@ -1159,87 +1146,87 @@ Simplified EDA Summary (kJ/mol)
  
  Alpha MOs
  -- Occupied --
--10.3652 -10.3531 -10.3377 -10.3336 -10.3238 -10.3183 -10.3005  -0.9822
- -0.8769  -0.8717  -0.8234  -0.7299  -0.7089  -0.6488  -0.6312  -0.5792
- -0.5456  -0.5452  -0.5339  -0.5162  -0.5025  -0.4731  -0.4577  -0.4437
- -0.4432  -0.4314  -0.3934  -0.3461  -0.3286
+-10.2924 -10.2796 -10.2633 -10.2601 -10.2503 -10.2446 -10.2260  -0.9937
+ -0.8880  -0.8818  -0.8333  -0.7391  -0.7174  -0.6563  -0.6382  -0.5854
+ -0.5517  -0.5513  -0.5393  -0.5219  -0.5085  -0.4785  -0.4623  -0.4490
+ -0.4486  -0.4363  -0.3974  -0.3493  -0.3317
  -- Virtual --
-  0.0370   0.0487   0.0571   0.0631   0.0723   0.0811   0.0948   0.1038
-  0.1118   0.1181   0.1210   0.1274   0.1333   0.1446   0.1502   0.1601
-  0.1625   0.1638   0.1698   0.1794   0.1817   0.1883   0.1949   0.2031
-  0.2067   0.2128   0.2188   0.2302   0.2339   0.2380   0.2450   0.2501
-  0.2571   0.2633   0.2663   0.2709   0.2746   0.2790   0.2854   0.2892
-  0.2928   0.2994   0.3010   0.3043   0.3131   0.3185   0.3248   0.3277
-  0.3325   0.3380   0.3395   0.3444   0.3485   0.3554   0.3572   0.3594
-  0.3639   0.3678   0.3749   0.3770   0.3846   0.3873   0.3909   0.3944
-  0.3998   0.4005   0.4055   0.4137   0.4181   0.4208   0.4228   0.4267
-  0.4332   0.4375   0.4412   0.4449   0.4521   0.4543   0.4624   0.4637
-  0.4665   0.4746   0.4779   0.4839   0.4853   0.4901   0.4992   0.5026
-  0.5063   0.5117   0.5193   0.5264   0.5313   0.5332   0.5482   0.5491
-  0.5556   0.5664   0.5686   0.5754   0.5776   0.5849   0.5925   0.5979
-  0.6080   0.6148   0.6271   0.6369   0.6450   0.6500   0.6658   0.6716
-  0.6772   0.6874   0.6994   0.7094   0.7121   0.7178   0.7241   0.7355
-  0.7423   0.7464   0.7533   0.7575   0.7622   0.7634   0.7680   0.7725
-  0.7761   0.7795   0.7834   0.7880   0.7895   0.7957   0.8040   0.8061
-  0.8164   0.8220   0.8281   0.8291   0.8373   0.8415   0.8615   0.8775
-  0.8815   0.8925   0.8948   0.9045   0.9239   0.9305   0.9376   0.9525
-  0.9619   0.9773   0.9985   1.0090   1.0425   1.0557   1.0633   1.0842
-  1.0894   1.1069   1.1365   1.1413   1.1637   1.1840   1.1923   1.2424
-  1.2489   1.2566   1.2597   1.2662   1.2963   1.3266   1.3379   1.3415
-  1.3583   1.3746   1.3784   1.3925   1.4052   1.4292   1.4397   1.4515
-  1.4669   1.5133   1.5175   1.5493   1.5744   1.6114   1.6585   1.7064
-  1.7294   1.7781   1.7895   1.8153   1.8472   1.8670   1.8816   1.8879
-  1.8984   1.9074   1.9180   1.9227   1.9314   1.9385   1.9448   1.9553
-  1.9605   1.9661   1.9813   1.9864   1.9937   2.0057   2.0146   2.0318
-  2.0380   2.0499   2.0721   2.0796   2.1008   2.1033   2.1293   2.1590
-  2.2059   2.2193   2.2294   2.2354   2.2473   2.2687   2.3074   2.3318
-  2.3703   2.4022   2.4173   2.4290   2.4471   2.4532   2.4633   2.4927
-  2.4977   2.5211   2.5461   2.5555   2.5617   2.5659   2.5783   2.5866
-  2.6024   2.6121   2.6288   2.6410   2.6492   2.6600   2.6932   2.7082
-  2.7141   2.7214   2.7365   2.7413   2.7577   2.7803   2.7831   2.8004
-  2.8197   2.8216   2.8301   2.8460   2.8530   2.8681   2.8837   2.8935
-  2.9174   2.9414   2.9848   2.9964   3.0037   3.0530   3.0663   3.0702
-  3.0960   3.1314   3.1470   3.1709   3.2244   3.2265   3.2367   3.2389
-  3.2537   3.2772   3.2809   3.2882   3.3205   3.3280   3.3339   3.3503
-  3.3709   3.3792   3.3962   3.4060   3.4327   3.4429   3.4603   3.4770
-  3.4871   3.4985   3.5296   3.5372   3.5390   3.5555   3.5781   3.5969
-  3.6237   3.6322   3.6364   3.6524   3.6825   3.6988   3.7188   3.7445
-  3.7635   3.7955   3.8607   3.8747   3.8802   3.8905   3.9057   3.9687
-  3.9837   4.0145   4.0495   4.0576   4.0732   4.1010   4.1091   4.1175
-  4.1380   4.2018   4.2387   4.2721   4.3241   4.3541   4.4118   4.4122
-  4.4264   4.4484   4.4540   4.4637   4.5011   4.5521   4.5865   4.5882
-  4.6033   4.6297   4.6601   4.7226   4.7323   4.7960   4.8487   4.8672
-  4.9490   4.9781   5.0698   5.1333   5.2193   5.2331   5.3004  22.8152
- 22.8649  22.8953  22.9214  23.0689  23.2157  23.3913
+  0.0596   0.0722   0.0804   0.0870   0.0963   0.1043   0.1187   0.1265
+  0.1356   0.1417   0.1444   0.1507   0.1559   0.1686   0.1729   0.1769
+  0.1830   0.1866   0.1909   0.2021   0.2041   0.2105   0.2179   0.2244
+  0.2284   0.2363   0.2397   0.2519   0.2562   0.2593   0.2661   0.2726
+  0.2768   0.2879   0.2885   0.2937   0.2972   0.3014   0.3047   0.3120
+  0.3143   0.3228   0.3249   0.3270   0.3361   0.3425   0.3476   0.3523
+  0.3543   0.3595   0.3625   0.3665   0.3693   0.3770   0.3783   0.3849
+  0.3881   0.3936   0.3987   0.4006   0.4082   0.4122   0.4164   0.4179
+  0.4251   0.4267   0.4308   0.4398   0.4452   0.4479   0.4495   0.4528
+  0.4579   0.4621   0.4665   0.4697   0.4785   0.4826   0.4894   0.4905
+  0.4916   0.5008   0.5033   0.5112   0.5116   0.5176   0.5237   0.5279
+  0.5325   0.5406   0.5465   0.5536   0.5579   0.5605   0.5750   0.5777
+  0.5843   0.5939   0.5973   0.6032   0.6071   0.6108   0.6225   0.6252
+  0.6367   0.6428   0.6567   0.6671   0.6733   0.6781   0.6947   0.7027
+  0.7039   0.7151   0.7263   0.7365   0.7403   0.7442   0.7521   0.7642
+  0.7699   0.7745   0.7815   0.7850   0.7912   0.7917   0.7963   0.8008
+  0.8051   0.8075   0.8120   0.8163   0.8177   0.8247   0.8319   0.8358
+  0.8446   0.8498   0.8565   0.8573   0.8658   0.8717   0.8914   0.9062
+  0.9099   0.9209   0.9259   0.9347   0.9520   0.9606   0.9666   0.9824
+  0.9920   1.0068   1.0271   1.0323   1.0680   1.0824   1.0877   1.1118
+  1.1167   1.1336   1.1628   1.1671   1.1897   1.2111   1.2185   1.2682
+  1.2752   1.2830   1.2860   1.2935   1.3250   1.3550   1.3665   1.3713
+  1.3872   1.4043   1.4085   1.4210   1.4353   1.4575   1.4701   1.4796
+  1.4981   1.5445   1.5485   1.5791   1.6065   1.6426   1.6900   1.7344
+  1.7531   1.8056   1.8182   1.8481   1.8782   1.8972   1.9113   1.9178
+  1.9282   1.9363   1.9492   1.9564   1.9643   1.9721   1.9785   1.9896
+  1.9938   2.0004   2.0118   2.0184   2.0266   2.0374   2.0466   2.0639
+  2.0685   2.0842   2.1026   2.1131   2.1328   2.1369   2.1606   2.1904
+  2.2428   2.2550   2.2626   2.2692   2.2796   2.3015   2.3438   2.3674
+  2.4100   2.4464   2.4601   2.4713   2.4851   2.4935   2.5015   2.5343
+  2.5407   2.5590   2.5857   2.5899   2.6001   2.6118   2.6193   2.6300
+  2.6468   2.6586   2.6728   2.6876   2.6895   2.7046   2.7347   2.7496
+  2.7525   2.7611   2.7750   2.7789   2.7996   2.8220   2.8269   2.8444
+  2.8626   2.8665   2.8738   2.8910   2.8978   2.9133   2.9315   2.9391
+  2.9580   2.9853   3.0280   3.0378   3.0458   3.0954   3.1098   3.1149
+  3.1403   3.1724   3.1886   3.2130   3.2678   3.2693   3.2787   3.2808
+  3.2964   3.3188   3.3226   3.3316   3.3636   3.3697   3.3762   3.3945
+  3.4141   3.4265   3.4401   3.4527   3.4760   3.4881   3.5038   3.5240
+  3.5326   3.5437   3.5785   3.5834   3.5888   3.6032   3.6235   3.6435
+  3.6707   3.6792   3.6845   3.7007   3.7303   3.7462   3.7661   3.7927
+  3.8153   3.8453   3.9161   3.9258   3.9289   3.9393   3.9569   4.0195
+  4.0337   4.0682   4.1015   4.1141   4.1287   4.1540   4.1638   4.1734
+  4.1936   4.2558   4.3044   4.3304   4.3948   4.4214   4.4778   4.4859
+  4.5096   4.5266   4.5413   4.5537   4.5734   4.6285   4.6622   4.6787
+  4.6939   4.7138   4.7385   4.7980   4.8169   4.8701   4.9396   4.9449
+  5.0248   5.0473   5.1439   5.2019   5.2847   5.3039   5.3713  22.6191
+ 22.6683  22.6986  22.7242  22.8710  23.0172  23.1919
  --------------------------------------------------------------
  
           Ground-State Mulliken Net Atomic Charges
 
      Atom                 Charge (a.u.)
   ----------------------------------------
-      1 C                    -0.959511
-      2 C                     0.169182
-      3 C                    -0.220688
-      4 C                    -1.034468
-      5 C                    -0.579004
-      6 H                     0.311304
-      7 H                     0.377695
-      8 H                     0.191381
-      9 H                     0.303292
-     10 H                     0.358005
-     11 H                     0.316912
-     12 H                     0.245609
-     13 H                     0.249515
-     14 H                    -0.123085
-     15 H                     0.369356
-     16 C                    -1.059170
-     17 C                    -0.525655
-     18 H                     0.340237
-     19 H                     0.027816
-     20 H                     0.286983
-     21 H                     0.308617
-     22 H                     0.323694
-     23 H                     0.321984
+      1 C                    -0.549055
+      2 C                     0.206239
+      3 C                    -0.085992
+      4 C                    -0.521054
+      5 C                    -0.484768
+      6 H                     0.202403
+      7 H                     0.194647
+      8 H                     0.168608
+      9 H                     0.264388
+     10 H                     0.206753
+     11 H                     0.223800
+     12 H                     0.147738
+     13 H                     0.173975
+     14 H                    -0.325491
+     15 H                     0.166029
+     16 C                    -0.727775
+     17 C                    -0.253498
+     18 H                     0.249783
+     19 H                    -0.059524
+     20 H                     0.175179
+     21 H                     0.208831
+     22 H                     0.213277
+     23 H                     0.205507
   ----------------------------------------
   Sum of atomic charges =     0.000000
 
@@ -1247,27 +1234,27 @@ Simplified EDA Summary (kJ/mol)
                     Cartesian Multipole Moments
  -----------------------------------------------------------------
     Charge (ESU x 10^10)
-                -0.0000
+                 0.0000
     Dipole Moment (Debye)
-         X      -0.2835      Y      -0.0394      Z       0.2041
-       Tot       0.3516
+         X      -0.2843      Y      -0.0352      Z       0.2137
+       Tot       0.3574
     Quadrupole Moments (Debye-Ang)
-        XX     -47.3944     XY       1.1855     YY     -51.3994
-        XZ       0.1966     YZ      -0.1343     ZZ     -48.4577
+        XX     -46.9486     XY       1.1691     YY     -50.9231
+        XZ       0.1792     YZ      -0.1416     ZZ     -47.9451
     Octopole Moments (Debye-Ang^2)
-       XXX     -12.2877    XXY      -6.6182    XYY       5.6784
-       YYY      -0.9475    XXZ       3.3975    XYZ       1.3055
-       YYZ       1.5187    XZZ      -1.1949    YZZ       0.1645
-       ZZZ       0.0129
+       XXX     -12.3009    XXY      -6.5706    XYY       5.7248
+       YYY      -0.9691    XXZ       3.5192    XYZ       1.3452
+       YYZ       1.5157    XZZ      -1.2008    YZZ       0.1623
+       ZZZ       0.0255
     Hexadecapole Moments (Debye-Ang^3)
-      XXXX   -2296.6458   XXXY      -3.3123   XXYY    -434.0032
-      XYYY       2.1548   YYYY    -310.5676   XXXZ       5.7005
-      XXYZ       1.3305   XYYZ      -1.3478   YYYZ      -1.6752
-      XXZZ    -390.3423   XYZZ       0.5717   YYZZ     -66.5671
-      XZZZ      -0.1932   YZZZ      -0.9852   ZZZZ    -120.3159
+      XXXX   -2273.4557   XXXY      -3.8963   XXYY    -429.0933
+      XYYY       2.0216   YYYY    -305.9245   XXXZ       5.5071
+      XXYZ       1.2415   XYYZ      -1.3701   YYYZ      -1.6660
+      XXZZ    -385.6546   XYZZ       0.5730   YYZZ     -65.1448
+      XZZZ      -0.2591   YZZZ      -1.0552   ZZZZ    -117.3409
  -----------------------------------------------------------------
- Total job time:  287.56s(wall), 14130.33s(cpu) 
- Tue Sep 30 00:16:30 2025
+ Total job time:  575.52s(wall), 5034.92s(cpu) 
+ Wed Jan 21 17:26:58 2026
 
         *************************************************************
         *                                                           *
